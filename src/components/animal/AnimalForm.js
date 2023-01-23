@@ -28,9 +28,9 @@ export const AnimalForm = () => {
   }, [animalId])
 
   const constructNewAnimal = () => {
-    const locationId = parseInt(animal.location_id)
+    const locationId = parseInt(animal.locationId)
 
-    if (locationId === 0) {
+    if (locationId === 0 || isNaN(locationId)) {
       window.alert("Please select a location")
     } else {
       if (animalId) {
